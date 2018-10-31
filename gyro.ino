@@ -290,8 +290,7 @@ void setup() {
     Serial.print(" I should be "); Serial.println(0x71, HEX);
     delay(1000);
   }  
- 
-  
+   
   Serial.println("MPU9250 is online...");
   // Start by performing self test and reporting values
   MPU9250SelfTest(SelfTest);   
@@ -364,6 +363,7 @@ void loop() {
     }
   }
 }
+
 
 //===================================================================================================================
 //    ========================================   R E A D G Y R O  ========================================
@@ -438,6 +438,7 @@ void setYawPitchRoll() {
   }
 }
 
+
 //===================================================================================================================
 //  ====================   Other Functions added to clean up above code   ===============
 //===================================================================================================================
@@ -462,7 +463,6 @@ void doBasicPrint(){
   // Print temperature in degrees Centigrade
   Serial.print("TEMPERATURE: ");  Serial.print(temperature, 1);  Serial.println(" deg C");
 }
-
 
 
 //===================================================================================================================
@@ -925,7 +925,6 @@ void readBytes(uint8_t address, uint8_t subAddress, uint8_t count, uint8_t * des
     dest[i++] = Wire.read();
   }         // Put read results in the Rx buffer
 }
-
 
 
 //===================================================================================================================
